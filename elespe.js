@@ -3,9 +3,6 @@ let tablicaFraz=document.getElementsByClassName("ant-table-cell ant-table-cell-w
 let frazy=[];
 let wszystkiDiv=document.getElementsByTagName('div');
 let urle=[];
-let doSkopiowania=[];
-let tabulator=`
-`;
 for(var i=0;i<tablicaFraz.length;i++){
     frazy[i]=tablicaFraz[i].innerText;
     }
@@ -15,8 +12,7 @@ for(var i=0;i<wszystkiDiv.length;i++){
         urle.push(div.innerText);
     }
 }
-frazy[frazy.length-1]+=`
-`;
+frazy[frazy.length-1]+=`\n`;
 frazy.push(urle);
 frazy[frazy.length-1].shift();
 navigator.clipboard.writeText(frazy.toString());
