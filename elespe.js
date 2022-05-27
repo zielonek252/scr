@@ -1,3 +1,4 @@
+javascript:(()=>{
 let tablicaFraz=document.getElementsByClassName("ant-table-cell ant-table-cell-with-append monitoring-table-phrase");
 let frazy=[];
 let wszystkiDiv=document.getElementsByTagName('div');
@@ -14,7 +15,10 @@ for(var i=0;i<wszystkiDiv.length;i++){
         urle.push(div.innerText);
     }
 }
-frazy[frazy.length-1]+=tabulator;
+frazy[frazy.length-1]+=`
+`;
 frazy.push(urle);
+frazy[frazy.length-1].shift();
 navigator.clipboard.writeText(frazy.toString());
 alert("Skopiowano "+(tablicaFraz.length)+" fraz z monitoringu.");
+})();
